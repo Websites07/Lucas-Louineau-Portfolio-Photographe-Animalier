@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de Visite Étudiant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --bg: #2c3e50;
+            --text: #34495e;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--bg);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* La Carte */
+        .card {
+            width: 380px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        /* Header Bleu */
+        .header-bg {
+            height: 110px;
+            background: var(--primary);
+        }
+
+        /* Photo de profil (Trou rond) */
+        .photo-container {
+            width: 115px;
+            height: 115px;
+            background: white;
+            border-radius: 50%;
+            margin: -60px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .photo-container img {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 15px 30px 25px;
+        }
+
+        .identity {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .identity h2 {
+            margin: 10px 0 5px;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .identity p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 0.7rem;
+            color: #bdc3c7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+
+        /* Coordonnées */
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+
+        .info-item i {
+            color: var(--primary);
+            width: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* Expertise */
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: #f1f3f5;
+            color: var(--primary);
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        /* Réseaux Sociaux */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .social-links a {
+            color: #bdc3c7;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header-bg"></div>
+        
+        <div class="photo-container">
+            <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/6018d3e9-a154-4343-9304-00096766d5e8-img_0597_jpe?asset_id=d6aebd37-85a3-4381-8b45-1c221d2670ab&img_etag=%22ffaae4a0298240638815c09b3486b512%22&image_assets=false&size=4529" alt="Mon Profil">
+        </div>
+
+        <div class="content">
+            <div class="identity">
+                <h2>Chiron Louis</h2>
+                <p>Étudiant en STI2D</p>
+            </div>
+
+            <div class="section-title">Coordonnées</div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i> lchiron@outlook.com
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i> +33 6 76 82 38 05
+                </div>
+            </div>
+
+            <div class="section-title">Expertise</div>
+            <div class="expertise-tags">
+                <span class="tag">Production vidéos</span>
+                <span class="tag">Concepteur web</span>
+                <span class="tag">production photos</span>
+                <span class="tag">Graphiste</span>
+                
+                
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/i_got_it_picture/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://fr.linkedin.com/in/louis-chiron-6b1ab6296" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UC_sBheo_TxHa7WUK301RWgg" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://chiron-site.github.io/Portfolio-accueil-Louis-Chiron/" target="_blank" title="Site Web"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
