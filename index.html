@@ -2,17 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte de Visite Étudiant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         :root {
             --primary: #2c3e50;
             --bg: #2c3e50;
             --text: #34495e;
             --light-gray: #f8f9fa;
+            --accent: #3498db;
         }
 
         body {
@@ -25,7 +28,6 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* La Carte */
         .card {
             width: 380px;
             background: white;
@@ -39,13 +41,11 @@
             transform: scale(1.03);
         }
 
-        /* Header Bleu */
         .header-bg {
             height: 110px;
             background: var(--primary);
         }
 
-        /* Photo de profil (Trou rond) */
         .photo-container {
             width: 115px;
             height: 115px;
@@ -101,7 +101,6 @@
             padding-bottom: 5px;
         }
 
-        /* Coordonnées */
         .contact-info {
             margin-bottom: 20px;
         }
@@ -120,7 +119,6 @@
             font-size: 0.9rem;
         }
 
-        /* Expertise */
         .expertise-tags {
             display: flex;
             flex-wrap: wrap;
@@ -137,7 +135,28 @@
             font-weight: 600;
         }
 
-        /* Réseaux Sociaux */
+        /* BOUTON MODIFIÉ */
+        .cv-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cv-link:hover {
+            background: var(--accent);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -162,47 +181,49 @@
 </head>
 <body>
 
-    <div class="card">
-        <div class="header-bg"></div>
-        
-        <div class="photo-container">
-            <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/6018d3e9-a154-4343-9304-00096766d5e8-img_0597_jpe?asset_id=d6aebd37-85a3-4381-8b45-1c221d2670ab&img_etag=%22ffaae4a0298240638815c09b3486b512%22&image_assets=false&size=4529" alt="Mon Profil">
+<div class="card">
+    <div class="header-bg"></div>
+
+    <div class="photo-container">
+        <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/6018d3e9-a154-4343-9304-00096766d5e8-img_0597_jpe?asset_id=d6aebd37-85a3-4381-8b45-1c221d2670ab&img_etag=%22ffaae4a0298240638815c09b3486b512%22&image_assets=false&size=4529" alt="Photo de profil">
+    </div>
+
+    <div class="content">
+        <div class="identity">
+            <h2>Chiron Louis</h2>
+            <p>Étudiant en STI2D</p>
         </div>
 
-        <div class="content">
-            <div class="identity">
-                <h2>Chiron Louis</h2>
-                <p>Étudiant en STI2D</p>
+        <div class="section-title">Coordonnées</div>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-envelope"></i> lchiron@outlook.com
             </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i> +33 6 76 82 38 05
+            </div>
+        </div>
 
-            <div class="section-title">Coordonnées</div>
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i> lchiron@outlook.com
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i> +33 6 76 82 38 05
-                </div>
-            </div>
+        <div class="section-title">competences</div>
+        <div class="expertise-tags">
+            <span class="tag">Production vidéos</span>
+            <span class="tag">Concepteur web</span>
+            <span class="tag">Production photos</span>
+            <span class="tag">Graphiste</span>
+        </div>
 
-            <div class="section-title">Expertise</div>
-            <div class="expertise-tags">
-                <span class="tag">Production vidéos</span>
-                <span class="tag">Concepteur web</span>
-                <span class="tag">production photos</span>
-                <span class="tag">Graphiste</span>
-                
-                
-            </div>
+        <a href="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/82f08a2e-46d5-4cf4-b641-48a2b9d680a1-img_5160_jpe?asset_id=1560a195-59a5-46c5-aeba-77c1e38d2510&img_etag=%22ef2ad5e47c1a48ab8629ea82614823ac%22&image_assets=false&size=1024" target="_blank" class="cv-link">
+            <i class="fas fa-eye"></i> Voir mon CV
+        </a>
 
-            <div class="social-links">
-                <a href="https://www.instagram.com/i_got_it_picture/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://fr.linkedin.com/in/louis-chiron-6b1ab6296" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UC_sBheo_TxHa7WUK301RWgg" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://chiron-site.github.io/Portfolio-accueil-Louis-Chiron/" target="_blank" title="Site Web"><i class="fas fa-globe"></i></a>
-            </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/i_got_it_picture/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://fr.linkedin.com/in/louis-chiron-6b1ab6296" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/channel/UC_sBheo_TxHa7WUK301RWgg" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://chiron-site.github.io/Portfolio-accueil-Louis-Chiron/" target="_blank"><i class="fas fa-globe"></i></a>
         </div>
     </div>
+</div>
 
 </body>
 </html>
