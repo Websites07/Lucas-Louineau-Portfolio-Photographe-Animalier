@@ -596,9 +596,16 @@ body.lock{ overflow:hidden; }
   .tile__cap b{ font-size:12.5px; }
   .chiffres{ grid-template-columns:1fr; gap:14px; }
   .foot__top{ grid-template-columns:1fr; }
+  /* Le titre passe sur deux lignes et les boutons descendent : le repere de
+     defilement venait se superposer a eux. Inutile sur telephone. */
+  .hero__scroll{ display:none; }
 }
 @media (max-width:400px){
-  .grid{ grid-template-columns:1fr; }
+  /* On garde deux colonnes jusqu'aux plus petits ecrans : en une seule colonne,
+     la galerie devenait un ruban de plusieurs milliers de pixels a faire defiler.
+     Gouttiere et ecart resserres pour rendre la largeur perdue aux photos. */
+  :root{ --gut:14px; }
+  .grid{ gap:6px; }
   .brand em{ display:none; }
 }
 
